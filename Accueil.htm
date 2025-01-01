@@ -1,0 +1,155 @@
+<!DOCTYPE html> <!-- Indique que le document est de type HTML 5. L'avantage de cette déclaration est qu'il est supporté par les principaux "Browser"(Mozilla,Chrome...) -->
+
+<html lang="fr"> <!-- html est la balise qui indique le début du document. Quant à lang="fr", elle indique la langue du contenu. Pas obligatoire mais toujours utile -->
+
+<head> <!-- head va donner des informations générales concernant le document -->
+
+<title>Le Repère</title> <!-- Titre de l'onglet du navigateur -->
+	
+<link rel="icon" type="image/png" sizes="32x32" href="favicon.png"> <!-- Ajout d'un favicon qui est l'image affichée à proximité du titre de l'onglet -->
+
+<link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap" rel="stylesheet"> <!-- Liens issues de Google Fonts pour modifier la police d'écriture -->
+<link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+</head>
+
+<body> <!-- Balise qui contient le contenu principale du document -->
+
+<!-- <style> va contenir la mise en forme d'une partie du document. Les instructions seront écrites en CSS dans cette section -->
+<style>
+body {
+
+ background-image: url("Fond-accueil.jpg"); /* Image de l'arrière plan. Mon image est dans le meme répertoire que mon doc html donc pas besoin de mettre le chemin en entier */ 
+	
+ background-size: cover; /* L'image couvre tous l'arrière plan */
+	
+ background-repeat: no-repeat; /* L'image ne se répète pas */
+	
+ background-attachment: fixed; /* L'image reste fixe lors du défilement */
+ }
+ 
+.titre{
+
+ background-color: #F5F5F5; /* Le fond de l'en-tête est blanc fumé (code hexadécimal) */
+	
+ padding: 17px; /* La zone de remplissage c'est-à-dire l'espace entre le contenu et la bordure. Plus la valeur du pixel CSS est élevé, plus l'espace grandit */
+	
+ border-radius: 40px; /* Arrondit les bordures. Plus la valeur du pixel CSS est élevé, plus les bords sont arrondis  */
+	
+ width: 700px; /* Largeur de l'en-tête. Plus la valeur du pixel CSS est élevé, plus la largeur augmente */
+	
+ margin-top: 55px; /* Espace au-dessus de l'élément */
+	
+ margin-bottom: 55px; /* Espace en-dessous de l'élément */
+	
+ margin-right: 400px; /* Espace à droite de l'élément */
+	
+ margin-left: 400px; /* Espace à gauche de l'élément */
+	
+ box-shadow: 20px 10px 30px #1E90FF;  /* Emplacement de l'ombrage ainsi que sa couleur*/
+}
+
+h1{
+
+ font-family: 'Doto',serif;  /* On utilise la police "Doto" */
+ 
+ font-size: 38px;  /* La taille du texte */
+ 
+ color: black;  /* Le texte est de couleur noir */
+}
+
+h2{
+
+ font-family: 'Courgette',serif; /* On utilise la police "Courgette" */
+ 
+ font-size: 33px; /* La taille du texte */
+ 
+ color: black; /* Couleur du texte */
+ 
+ text-align: center; /* On centre le texte */
+}
+
+.bouton{
+
+ background-color: white; /* L'arrière plan des bouton est blanche */
+	
+ color: black; /* Le texte est noir */
+	
+ padding: 15px; /* La zone de remplissage c'est-à-dire l'espace entre le contenu et la bordure */
+	
+ margin-top: 50px; /* Espace au-dessus de l'élément */
+ 
+ margin-right: 15px; /* Espace à droite de l'élément */
+ 
+ margin-left: 15px; /* Espace à gauche de l'élément */
+ 
+ font-size: 16px; /* La taille du texte */
+ 
+ cursor: pointer;  /* cursor indique la forme que doit avoir le curseur lorsque le pointeur de la souris survole le bouton. "Pointer" change le curseur de la souris en main avec l'index pointé pour indiquer que le bouton est cliquable. */
+ 
+ border-radius: 40px; /* Arrondit les bordures. */
+ 
+ box-shadow: 20px 10px 30px #1E90FF; /* Emplacement de l'ombrage ainsi que sa couleur*/
+ 
+ font-family: 'Doto',serif; /* On utilise la police "Doto" */
+	
+}
+
+.bouton:hover { /* ":hover" est une caractéristique média CSS qui permet de définir un style qui s'applique à un élément lorsque la souris passe dessus */
+
+    background-color: #1E90FF; /* L'arrière plan des bouton est d'un bleue spécifique */
+	
+    color: white; /* Le texte est blanc */
+	
+    box-shadow: 0px 6px 8px black; /* Emplacement de l'ombrage ainsi que sa couleur*/
+	
+    font-family: 'Doto',serif; /* On utilise la police "Doto" */
+}
+
+.contenu {
+
+    background-color: white; /* L'arrière du contenu principale du site est blanche */
+	
+    padding: 20px; /* La zone de remplissage c'est-à-dire l'espace entre le contenu et la bordure */
+	
+    margin-top: 50px; /* Espace au-dessus de l'élément */
+	
+	margin-right: 380px; /* Espace à droite de l'élément */
+	
+	margin-left: 350px; /* Espace à gauche de l'élément */
+	
+    width: 800px; /* Largeur du contenu */
+	
+    border-radius: 15px; /* Arrondit les bordures. */
+	
+    box-shadow: 0px 20px 90px #1E90FF; /* Emplacement de l'ombrage ainsi que sa couleur */
+}
+
+</style>
+
+<header>
+ <div class="titre"> <!-- "div" est un conteneur en html qui n'a aucun effet en soi sur le contenu. Il est plutôt utilisé pour regrouper le contenu afin qu'il puisse être facilement stylé à l'aide des attributs "class" par exemple -->
+  <center><h1><strong>Bienvenue dans le Repère</strong></h1></center> <!-- "strong" est un élement html qui mets un mot en gras -->
+ </div>
+</header>
+ 
+<center>
+ <a href="reseau.html" class="bouton"><strong>Réseau</strong></a>
+ <a href="langage-c.html" class="bouton"><strong>Langage C</strong></a> <!-- "a" ,avec son attribut "href", est un élement html qui crée un lien hypertexte vers des pages web -->
+ <a href="java.html" class="bouton"><strong>Java</strong></a>  
+ <a href="bases-de-donnees.html" class="bouton"><strong>Bases de données</strong></a>
+</center>
+ 
+<main>
+ <div class="contenu">
+   <h2><strong>Préambule</strong></h2> <!-- "h1" , "h2", "h3" ... sont des élements html qui représentent les niveaux de titre de section -->
+   <p></p>
+ </div>
+</main>
+
+<footer> <!-- "footer" est un élement html qui représent le pied de page -->
+ <center><p>&copy; 2024 Le Repère, Lahcen IDLAHCEN</p></center>
+</footer>
+
+</body>
+</html>
+
